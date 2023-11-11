@@ -1,0 +1,40 @@
+counterc=0
+counterd=0
+while True:
+  print("EPIC BATTLE")
+  selectyourmove1 = input("selectyourmove1 PLayer1>")
+  selectyourmove2 = input("selectyourmove2 Player2>")
+
+  if selectyourmove1 == 'P' and selectyourmove2 == 'R':
+    print("Player1 wins",counterc)
+    counterc+=1
+    
+  elif selectyourmove1 == 'S' and selectyourmove2 == 'P':
+    print("Player1 wins",counterc)
+    counterc+=1
+  elif selectyourmove1 == 'R' and selectyourmove2 == 'S':
+    print("Player1 wins",counterc)
+    counterc+=1
+  elif selectyourmove2 == 'P' and selectyourmove1 == 'R':
+    print("Player2 wins",counterd)
+    counterd+=1
+  elif selectyourmove2 == 'S' and selectyourmove1 == 'P':
+    print("Player2 wins",counterd)
+    counterd+=1
+  elif selectyourmove2 == 'R' and selectyourmove1 == 'S':
+    print("Player2 wins",counterd)
+    counterd+=1
+  elif (selectyourmove1 == 'R' or selectyourmove1 == 'P' 
+   or selectyourmove1 == 'S') and (selectyourmove2 == 'R' 
+  or selectyourmove2 == 'P' or selectyourmove2 == 'S'):
+   print("Tie")
+   counterc+=0
+   counterd+=0
+   break
+
+  else:
+    print("Invalid input")
+  continue
+print ("total points of player1=",counterc)
+print ("total points of player2=",counterd)
+print("GAME OVER")
